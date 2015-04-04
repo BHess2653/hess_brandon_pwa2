@@ -1,0 +1,168 @@
+@import url(http://fonts.googleapis.com/css?family=Signika+Negative:400,700);
+
+html, body {
+  height:100%;
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 25px;
+}
+
+html {
+  background: url(../images/bg.jpg) fixed;
+  background-color: #ccc;
+  background-size: 100%;
+}
+
+div {
+  overflow: hidden;
+}
+
+h1 {
+	text-align: center;
+}
+
+a {
+  color: #322bff;
+  text-decoration: underline;
+  transition: 500ms;
+}
+a:hover {
+  color: #26a1ff;
+}
+
+p {
+  padding: 0 5%;
+  text-align: center;
+}
+
+img {
+  box-shadow: 0px 0px 4px #000;
+}
+
+form ul li{
+	list-style-type: none;
+}
+
+input {
+	border-radius: 5px;
+	font-size: 15px;
+	width: 150px;
+	height: 20px;
+}
+
+button {
+	border-color: #000; 
+	color: #000;
+	background-color: #600;
+	border-radius: 5px;
+	font-size: .80em;
+	width: 150px;
+	height: 28px;
+}
+
+form {
+	text-align: center;
+}
+
+form input {
+	margin-top: 5px;
+	border-radius: 5px;
+	font-size: 20px;
+	width: 500px;
+	height: 40px;
+}
+
+form button {
+	margin-top: 5px;
+	border-radius: 5px;
+	font-size: 20px;
+	width: 200px;
+	height: 40px;
+}
+
+input:focus {
+	color: #fff;
+	background-color: #000;
+}
+
+#header {
+  background: hsla(299, 100%, 0%, 0.5);
+  padding: 1%;
+  overflow: hidden;
+  height: 55px;
+}
+#header img {
+  float: left;
+  box-shadow: none;
+}
+#header ul {
+  list-style: none;
+  float: left;
+  padding-left: 10px;
+  margin-top: 15px;
+}
+#header ul li {
+  float: left;
+  margin-left: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.fullscreen {
+  height: 95%;
+  position: relative;
+}
+.fullscreen .header {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  text-shadow: 0px 0px 2px #000;
+}
+
+.white {
+  background: #eeeeec;
+  padding: 0 5%;
+}
+.nobg {
+  background: none;
+  padding: 0 5%;
+  color: #fff;
+  text-shadow: 0px 0px 4px #000;
+}
+.semitrans {
+  background: rgba(255, 255, 255, .8);
+  padding: 0 5%;
+}
+.dark {
+  clear: both;
+  color: #eeeeec;
+  background: hsla(299, 100%, 0%, 0.5);
+  padding: 0 5%;
+}
+
+.nopadding {
+  padding: 0;
+}
+
+.floatleft {
+  float: left;
+  margin: 2%;
+}
+.floatright {
+  float: right;
+  margin: 2%;
+}
+
+.more {
+  text-align: center;
+  font-size: 17px;
+}
+.more a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.more a:hover {
+  color: #777;
+}

@@ -1,0 +1,102 @@
+<!doctype html>  
+
+<!--
+	This is the main index of the application
+	
+	All your script tags should be at the bottom of this file
+	
+	The only html element in the body is the container div
+	Your code should load your page templates into the container
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Admin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link rel="icon" type="image/png" href="images/emblem.png">
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<!-- end CSS-->
+	<style type="text/css">
+	form input{width: 780px;}
+	#btn{text-align: right;}
+	h1{text-align: left;}
+	form{clear: both; text-align: left;}
+	.semitrans {padding:0 20%;}
+	.floatright {
+		box-shadow: none;
+		padding-right: 300px;
+ 		float: right;
+ 		margin:0; 
+	}
+	.fullscreen {
+  		height: 10%;
+  		position: relative;
+	}
+	</style>
+	
+</head>
+
+<body>
+	<div class="fullscreen nopadding">
+	<div id="header">
+	<img src="images/Logo2.png" width="50px" />
+	<ul>
+	  <li>Welcome User</li>
+	  <li><button id="home">My Account</button></li>
+	  <li>|</li>
+	  <li><button id="home">Logout</button></li>
+	</ul>
+	</div>
+	</div>
+
+	<div class="semitrans">
+	  <a id="test"></a>
+	  <h1>My Account</h1>
+		<form action="#">
+			<ul>
+			  <li>First Name: </li><input type="text" name="name" id="first">
+			  <li>Last Name: </li><input type="text" name="name" id="last">
+			  <li>Username: </li><input type="text" name="name" id="username" placeholder="Username">
+			  <li>Password: </li><input type="password" name="psw" id="password" placeholder="********">
+			  <li>Email: </li><input type="email" name="email" id="email" placeholder="Email@example.com">
+			  <li id="btn"><button id="update">Update</button></li>
+			</ul>
+		</form>
+	</div>
+
+	<div class="dark">
+	  <p>&#169; 2015 Brandon Hess</p>
+	</div>
+
+	<!-- jquery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- plugins -->
+
+	
+	<!-- main -->
+	<script type="text/javascript" src="js/main.js"></script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
