@@ -1,0 +1,236 @@
+<!doctype html>  
+
+<!--
+	This is the main index of the application
+	
+	All your script tags should be at the bottom of this file
+	
+	The only html element in the body is the container div
+	Your code should load your page templates into the container
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Projects</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link rel="icon" type="image/png" href="images/emblem.png">
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<!-- end CSS-->
+	<style type="text/css">
+	#overlay {
+	  width: 100%;
+	  height: 100%;
+	  background: rgba(0,0,0,.5);
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  z-index: 1000;
+	  display: none;
+	}
+
+	#modal {
+	  width: 550px;
+	  background:#CCC;
+	  box-shadow: 0 0 10px #000;
+	  border-radius: 10px;
+	  overflow: hidden;
+	  position: relative;
+	  top: 50%;
+	  left: 50%;
+	  margin-top: -280px;
+	  margin-left: -300px;
+	  z-index: 1001;
+	  display: none;
+	}
+
+	#modal .header {
+	  background:#333;
+	  color:#FFF;
+	  padding: 10px;
+	}
+
+	#modal p {
+	  margin: 15px;
+	}
+
+	#modal .close {
+	  position: absolute;
+	  right: 5px;
+	  top: 5px;
+	  font-size: 16px;
+	  font-weight: bold;
+	  padding: 5px 10px;
+	  border: 1px solid #ccc;
+	  cursor: pointer;
+	  background-color: #F00;
+	}
+
+	form {
+	  padding: 10px;
+	  text-align: left;
+	}
+
+	form .input {
+	  padding: 10px;
+	}
+
+	header {
+	  width: 960px;
+	}
+
+	.userid {
+	  width: 100px;
+	  float: right;
+	}
+
+	.logoutbox {
+	  width: 400px;
+	  float: right;
+	}
+
+	.mystatus > input[type=radio]{
+	  display:none;
+	}
+
+	input[type=radio] + img{
+	  cursor:pointer;
+	  border:2px solid transparent;
+	}
+	input[type=radio]:checked + img{
+	  border:2px solid #f00;
+	}
+	.fullscreen {
+	  height: 67%;
+	  position: relative;
+	}
+	form input {
+	  margin-top: 5px;
+	  border-radius: 5px;
+	  font-size: 18px;
+	  width: 300px;
+	  height: 25px;
+	}
+	.welcome {
+		padding-top: 10px;
+	}
+	</style>
+	
+</head>
+
+<body>
+	<div class="fullscreen nopadding">
+	<div id="header">
+	<img src="images/Logo2.png" width="50px" />
+	<ul>
+	  <li>Welcome User</li>
+	  <li><button id="home">My Account</button>
+	  	<audio id="hover" preload="auto"><source src="audio/hover.mp3" controls></source></audio>
+	  	<audio id="click" preload="auto"><source src="audio/click.mp3" controls></source></audio>
+	  	<audio id="cancel" preload="auto"><source src="audio/cancel.mp3" controls></source></audio>
+	  </li>
+	  <li>|</li>
+	  <li><button id="home">Logout</button></li>
+	</ul>
+	</div>
+	</div>
+
+
+
+	<div class="white">
+	  <div class="welcome">
+	    <button class="modalClick">Add
+	      </button>
+	      
+	  </div>
+
+	    <div id="projectlist">
+	        <h1>Current Projects</h1>
+	        
+	        <div class="projects">
+	        </div>
+	    </div>
+	</div> <!-- End of White -->
+
+
+
+	<div class="dark">
+	  <p>&#169; 2015 Brandon Hess</p>
+	</div>
+
+	    <div id="overlay">
+	        <div id="modal">
+	          <span id="close" class="close">X</span>
+	          <audio id="cancel" preload="auto"><source src="audio/cancel.mp3" controls></source></audio>
+	    <h3 class="header">Add Project</h3>
+	    <div id="add">
+	        <form id="addForm">
+	            <label>Project Name: </label>
+	                <input name="projectName"type="text" id="projectName" placeholder="Project Name"/><br>
+	                
+	            <label>Project Description: </label>
+	                <input name="projectDescription"type="text" id="projectDescription" placeholder="Project Description"/><br>
+	                
+	            <label>Project Due Date: </label>
+	                <input name="projectDueDate"type="text" id="projectDueDate" placeholder="Project Due Date"/><br>
+	                
+	            <label for="status">Select status:</label><br>
+	            
+	            
+	            
+	            
+	            <label class="mystatus">
+	            <input type="radio" name="status" id="urgent"> <img src="images/btn1.jpg" width="69" height="75">
+	            </label>
+	            
+	            <label class="mystatus">
+	            <input type="radio" name="status" id="urgent"> <img src="images/btn2.png" width="69" height="75">
+	            </label>
+	            
+	            <label class="mystatus">
+	            <input type="radio" name="status" id="urgent"> <img src="images/btn3.png" width="69" height="75">
+	            </label>
+	            
+	            <label class="mystatus">
+	            <input type="radio" name="status" id="urgent"> <img src="images/btn4.jpg" width="69" height="75">
+	            </label>
+	            
+	    <br>
+	    <button name="addButton" id="addButton">Add</button>
+	    <!-- <input name="addButton" type="button" id="addButton" value="Add" /> -->
+	    </form>
+
+	      </div>
+	    </div>
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- plugins -->
+
+	
+	<!-- main -->
+	<script type="text/javascript" src="js/main.js"></script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

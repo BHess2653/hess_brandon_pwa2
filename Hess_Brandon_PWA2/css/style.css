@@ -65,6 +65,16 @@ button {
 	height: 28px;
 }
 
+button:hover {
+  background-color: #9e0000;
+}
+
+button:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: none;
+}
+
 form {
 	text-align: center;
 }
@@ -172,3 +182,134 @@ input:focus {
 .more a:hover {
   color: #777;
 }
+
+.tooltip {
+  display: none;
+  position: absolute;
+  border: 1px solid #333;
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-size: 12px Arial;
+}
+
+
+#tabs {
+  background-color: #999;
+  width: 600px;
+  height: 150px;
+  padding: 20px;
+  margin-left:40px;
+}
+
+#tabs-nav{
+  width: 600px;
+  height: 75px;
+  padding: 20px;
+  margin-left:40px;
+  background-color: #999;
+  text-decoration: none;
+  list-style-type: none;
+
+}
+
+#tabs-nav li {
+  display: inline;
+}
+
+/* =================== animation thing =================== */
+
+figure#timer-animation {
+  z-index: 999999999999;
+  position: fixed;
+  top: 80px;
+  left: -200px;
+  text-align: center;
+  -moz-animation-name: animation-plok-figure;
+  -moz-animation-duration: 3600s;
+  -moz-animation-delay: 1348s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  -webkit-animation-name: animation-plok-figure;
+  -webkit-animation-duration: 2000s;
+  -webkit-animation-delay: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  -o-animation-name: animation-plok-figure;
+  -o-animation-duration: 3600s;
+  -o-animation-delay: 1348s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+
+  animation-name: animation-plok-figure;
+  animation-duration: 3600s;
+  animation-delay: 1348s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+figure#timer-animation img {
+  margin-top: 0;
+  -moz-animation-name: animation-plok-img;
+  -moz-animation-duration: 2500ms;
+  -moz-animation-delay: 0s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+
+  -webkit-animation-name: animation-plok-img;
+  -webkit-animation-duration: 1500ms;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+
+  -o-animation-name: animation-plok-img;
+  -o-animation-duration: 2500ms;
+  -o-animation-delay: 0s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: alternate;
+
+  animation-name: animation-plok-img;
+  animation-duration: 2500ms;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@-moz-keyframes animation-plok-img {
+  from {margin-top: 20px}
+  to {margin-top: 80px;}
+}
+@-moz-keyframes animation-plok-figure {
+  0% {left: -200px;}
+  0.35% {left: 1346px;}
+  100% {left: 1346px;}
+}
+@-webkit-keyframes animation-plok-img {
+  from {margin-top: 20px}
+  to {margin-top: 80px;}
+}
+@-webkit-keyframes animation-plok-figure {
+  0% {left: -200px;}
+  0.35% {left: 1346px;}
+  100% {left: 1346px;}
+}
+@-o-keyframes animation-plok-img {
+  from {margin-top: 20px}
+  to {margin-top: 80px;}
+}
+@-o-keyframes animation-plok-figure {
+  0% {left: -200px;}
+  0.35% {left: 1346px;}
+  100% {left: 1346px;}
+}
+@keyframes animation-plok-img {
+  from {margin-top: 20px}
+  to {margin-top: 80px;}
+}
+@keyframes animation-plok-figure {
+  0% {left: -200px;}
+  0.35% {left: 1346px;}
+  100% {left: 1346px;}
+}
+

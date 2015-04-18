@@ -27,17 +27,29 @@
 	<!-- CSS concatenated and minified via ant build script-->
 	<link rel="stylesheet" href="css/style.css?v=1">
 	<!-- end CSS-->
+
+	<script src="js/prefixfree.min.js"></script>
 	
 </head>
 
 <body>
+	<audio id="secret-found" preload="auto">
+      <source src="audio/scream.mp3"></source>
+      <source src="audio/scream.ogg"></source>
+    </audio>
 	<div class="fullscreen nopadding">
 	<div id="header">
 	<img src="images/Logo2.png" width="50px" />
 	<ul>
-	  <li><input type="text" name="name" id="username" placeholder="Username"></a></li>
-	  <li><input type="password" name="psw" id="password" placeholder="Password"></li>
-	  <li><button id="login">Log in</button></li>
+	  <li><input class="masterTooltip" type="text" name="name" id="user" placeholder="Username" title="Please eneter username"></a></li>
+
+	  <li><input class="masterTooltip" type="text" name="pass" id="user" placeholder="Password" title="Please eneter password"></li>
+	 
+	  <li><button id="login">Log in</button>
+	  		<audio id="hover" preload="auto"><source src="audio/hover.mp3" controls></source></audio>
+	  		<audio id="click" preload="auto"><source src="audio/click.mp3" controls></source></audio>
+	  		<audio id="cancel" preload="auto"><source src="audio/cancel.mp3" controls></source></audio>
+	  </li>
 	  <li>|</li>
 	  <li><button id="join">Sign up</button></li>
 	</ul>
@@ -71,8 +83,10 @@
 	</div>
 
 	<!-- jquery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- plugins -->
+
+	<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
 	
 	<!-- main -->
 	<script type="text/javascript" src="js/main.js"></script>

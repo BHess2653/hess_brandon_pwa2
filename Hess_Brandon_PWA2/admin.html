@@ -43,6 +43,27 @@
   		height: 10%;
   		position: relative;
 	}
+
+	#tabs {
+	  background-color: #999;
+	  width: 600px;
+	  height: 150px;
+	  padding: 20px;
+	}
+
+	#tabs-nav{
+	  width: 600px;
+	  height: 75px;
+	  padding: 20px;
+	  background-color: #999;
+	  text-decoration: none;
+	  list-style-type: none;
+
+	}
+
+	#tabs-nav li {
+	  display: inline;
+	}
 	</style>
 	
 </head>
@@ -53,7 +74,11 @@
 	<img src="images/Logo2.png" width="50px" />
 	<ul>
 	  <li>Welcome User</li>
-	  <li><button id="home">My Account</button></li>
+	  <li><button id="home">My Account</button>
+	  	<audio id="hover" preload="auto"><source src="audio/hover.mp3" controls></source></audio>
+	  	<audio id="click" preload="auto"><source src="audio/click.mp3" controls></source></audio>
+	  	<audio id="cancel" preload="auto"><source src="audio/cancel.mp3" controls></source></audio>
+	  </li>
 	  <li>|</li>
 	  <li><button id="home">Logout</button></li>
 	</ul>
@@ -65,22 +90,57 @@
 	  <h1>My Account</h1>
 		<form action="#">
 			<ul>
-			  <li>First Name: </li><input type="text" name="name" id="first">
-			  <li>Last Name: </li><input type="text" name="name" id="last">
-			  <li>Username: </li><input type="text" name="name" id="username" placeholder="Username">
-			  <li>Password: </li><input type="password" name="psw" id="password" placeholder="********">
-			  <li>Email: </li><input type="email" name="email" id="email" placeholder="Email@example.com">
+			  <li>First Name: </li><input class="masterTooltip" type="text" name="name" id="first" title="Please enter firstname">
+			  <li>Last Name: </li><input class="masterTooltip" type="text" name="name" id="last" title="Please enter lastname">
+			  <li>Username: </li><input class="masterTooltip" type="text" name="name" id="username" placeholder="Username" title="Please enter username">
+			  <li>Password: </li><input class="masterTooltip" type="password" name="psw" id="password" placeholder="********" title="Please enter password">
+			  <li>Email: </li><input class="masterTooltip" type="email" name="email" id="email" placeholder="Email@example.com" title="Please enter email">
 			  <li id="btn"><button id="update">Update</button></li>
 			</ul>
 		</form>
 	</div>
+
+
+	<div class="semitrans">
+		<ul id="tabs-nav">
+	    <li><a href="#projects"><img src="images/01.gif" width="100" height="67" id="projects"></a></li>
+	    <li><a href="#tasks"><img src="images/02.jpg" width="100" height="67" id="tasks"></a></li>
+	    <li><a href="#users"><img src="images/03.png" width="100" height="67" id="users"></a></li>
+	  </ul>
+	  
+	  <div id="tabs">
+	    
+	  <p id="projects">
+	  First tab<br><br>
+	  Go to my projects...  <button class="projectsbtn">Projects</button>
+	  </p>
+	    
+	  <p id="tasks">
+	  Second tab<br><br>
+	  Go to my tasks...  <button class="taskbtn">Tasks</button>
+	  </p>
+	    
+	  <p id="users">
+	  Third tab<br><br>
+	  Go to my users...  <button class="usersbtn">Users</button>
+	  </p>
+	    
+	  </div><!-- Closes Tabs Content -->
+	</div>
+
+
+	<div class="semitrans">
+		<h3>Image Gallery Here:</h3>
+  		<p>You can make this any kind of gallery. You can make icons or images, however works best with your site.</p>
+	</div>
+
 
 	<div class="dark">
 	  <p>&#169; 2015 Brandon Hess</p>
 	</div>
 
 	<!-- jquery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- plugins -->
 
 	
