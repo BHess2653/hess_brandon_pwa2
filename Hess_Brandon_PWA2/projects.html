@@ -27,6 +27,7 @@
 	<!-- CSS concatenated and minified via ant build script-->
 	<link rel="stylesheet" href="css/style.css?v=1">
 	<!-- end CSS-->
+
 	<style type="text/css">
 	#overlay {
 	  width: 100%;
@@ -124,6 +125,9 @@
 	.welcome {
 		padding-top: 10px;
 	}
+	.tooltip {
+		z-index: 1002;
+	}
 	</style>
 	
 </head>
@@ -176,13 +180,13 @@
 	    <div id="add">
 	        <form id="addForm">
 	            <label>Project Name: </label>
-	                <input name="projectName"type="text" id="projectName" placeholder="Project Name"/><br>
+	                <input class="masterTooltip" title="Please enter Project Name" name="projectName"type="text" id="projectName" placeholder="Project Name"/><br>
 	                
 	            <label>Project Description: </label>
-	                <input name="projectDescription"type="text" id="projectDescription" placeholder="Project Description"/><br>
+	                <input class="masterTooltip" title="Please enter Project Description" name="projectDescription"type="text" id="projectDescription" placeholder="Project Description"/><br>
 	                
 	            <label>Project Due Date: </label>
-	                <input name="projectDueDate"type="text" id="projectDueDate" placeholder="Project Due Date"/><br>
+	                <input class="masterTooltip" title="Please enter Project Due Date" name="projectDueDate"type="text" id="projectDueDate" placeholder="Project Due Date"/><br>
 	                
 	            <label for="status">Select status:</label><br>
 	            
