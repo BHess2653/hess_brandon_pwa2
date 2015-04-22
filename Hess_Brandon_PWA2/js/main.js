@@ -224,8 +224,8 @@ $("button").each(function(i) {if (i != 0) {
     },
     easter_egg: function() {
       $("html, body").css("height", "100%");
-      $("html").css("background", "url(http://img2.wikia.nocookie.net/__cb20150404130533/freddy-fazbears-pizza/images/4/41/FNaF3_Office_AlarmBlinking.gif)")
-      $("body").css("background-image", "url(http://img2.wikia.nocookie.net/__cb20150402180052/freddy-fazbears-pizza/images/a/a5/Puppetlookingatyou.gif)");
+      $("html").css("background", "url(images/fnaf3.gif)")
+      $("body").css("background-image", "url(images/puppet.gif)");
       $("body").css("background-position", "center center");
       $("body").css("background-repeat", "no-repeat");
       $(".white").css("background", "#595959");
