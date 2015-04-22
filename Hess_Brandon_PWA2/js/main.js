@@ -225,7 +225,7 @@ $("button").each(function(i) {if (i != 0) {
     easter_egg: function() {
       $("html, body").css("height", "100%");
       $("html").css("background", "url(images/fnaf3.gif)")
-      $("body").css("background-image", "url(images/puppet.gif)");
+      $("body").css("background-image", "url(images/left2.gif)");
       $("body").css("background-position", "center center");
       $("body").css("background-repeat", "no-repeat");
       $(".white").css("background", "#595959");
