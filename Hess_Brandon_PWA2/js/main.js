@@ -224,9 +224,13 @@ $("button").each(function(i) {if (i != 0) {
     },
     easter_egg: function() {
       $("html, body").css("height", "100%");
-      $("body").css({"background-image": "url(http://img1.wikia.nocookie.net/__cb20150406225110/freddy-fazbears-pizza/images/b/b2/SpringtrapJumpscareFromLeft.gif)", "z-index": "5"});
+      $("html").css("background", "url(http://img2.wikia.nocookie.net/__cb20150404130533/freddy-fazbears-pizza/images/4/41/FNaF3_Office_AlarmBlinking.gif)")
+      $("body").css("background-image", "url(http://img2.wikia.nocookie.net/__cb20150402180052/freddy-fazbears-pizza/images/a/a5/Puppetlookingatyou.gif)");
       $("body").css("background-position", "center center");
       $("body").css("background-repeat", "no-repeat");
+      $(".white").css("background", "#595959");
+      $(".header").text("It's Me").css({"display": "block", "font-size": "2em", "-webkit-margin-before": "0.67em", "-webkit-margin-after": "0.67em", "-webkit-margin-start": "0px", "-webkit-margin-end": "0px", "font-weight": "bold"});
+      $("#more").css("display", "none");
       $('#secret-found')[0].play(); // plays the sound
       // return alert("That's how I roll baby <3");
     }
@@ -236,8 +240,50 @@ $("button").each(function(i) {if (i != 0) {
 }).call(this);
 
 
+/* ============================== Login =============================== */
 
+$('#signinButton').on('click', function(e) {
+  e.preventDefault();
+  var user = $('#user').val();
+  var pass = $('#pass').val();
+  // Console.log("This notifies you if the password is working")
+  $ajax({
+    url:'xhr/Login.php',
+    type:'post',
+    dataType:'json',
+    data:{
+      username: user ,
+      password: pass
+    },
+    success:function(response){
+      console.log("Test User");
+      if(response.error){
+        alert(response.error);
+      }else{
+        window.location.assign('admin.html');
+      };
+    }
+  });
+});
 
+/* ============================== Display avatar =============================== */
+
+$.getJSON("xhr/get_user.php", function(data){
+  console.log(data);
+  $.each(data, function(key, val){
+    console.log(val.avatar);
+      // $(".avatarPhoto").html('<img src=" + val.avatar + " />' + val.avatar);
+  });
+});
+
+/* ============================== Logout =============================== */
+
+$("#logOut").click(function(e){
+  e.preventDefault();
+  $.get("xhr/logout.php", function(){
+    window.location.assign('index.html');
+  });
+});
 
 
 	

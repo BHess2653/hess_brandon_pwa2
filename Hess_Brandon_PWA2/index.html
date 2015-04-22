@@ -19,7 +19,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<link rel="icon" type="image/png" href="images/emblem.png">
+	<link rel="icon" type="image/png" href="images/emblem.png" display="none">
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,9 +33,13 @@
 </head>
 
 <body>
-	<audio id="secret-found" preload="auto">
-      <source src="audio/scream.mp3"></source>
-      <source src="audio/scream.ogg"></source>
+	<audio autoplay>
+		<source src="audio/Sarif.mp3"></source>
+	</audio>
+
+	<audio id="secret-found" preload="auto" loop>
+      <source src="audio/Mask.mp3"></source>
+      <source src="audio/Mask.ogg"></source>
     </audio>
 	<div class="fullscreen nopadding">
 	<div id="header">
@@ -43,9 +47,10 @@
 	<ul>
 	  <li><input class="masterTooltip" type="text" name="name" id="user" placeholder="Username" title="Please eneter username"></a></li>
 
-	  <li><input class="masterTooltip" type="text" name="pass" id="user" placeholder="Password" title="Please eneter password"></li>
+	  <li><input class="masterTooltip" type="text" name="pass" id="pass" placeholder="Password" title="Please eneter password"></li>
 	 
-	  <li><button id="login">Log in</button>
+	  <li><button id="signinButton">Log in</button>
+
 	  		<audio id="hover" preload="auto"><source src="audio/hover.mp3" controls></source></audio>
 	  		<audio id="click" preload="auto"><source src="audio/click.mp3" controls></source></audio>
 	  		<audio id="cancel" preload="auto"><source src="audio/cancel.mp3" controls></source></audio>
