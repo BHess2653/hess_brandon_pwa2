@@ -230,8 +230,11 @@ $("button").each(function(i) {if (i != 0) {
       $("body").css("background-repeat", "no-repeat");
       $(".white").css("background", "#595959");
       $(".header").text("It's Me").css({"display": "block", "font-size": "2em", "-webkit-margin-before": "0.67em", "-webkit-margin-after": "0.67em", "-webkit-margin-start": "0px", "-webkit-margin-end": "0px", "font-weight": "bold"});
+      // $( ".header" ).removeClass( "header" ).addClass( "glitch" );
       $("#more").css("display", "none");
       $('#secret-found')[0].play(); // plays the sound
+      $("#alarm")[0].play();
+      $("#bg-music").attr("id", "newID");
       // return alert("That's how I roll baby <3");
     }
   };
@@ -284,6 +287,32 @@ $("#logOut").click(function(e){
     window.location.assign('index.html');
   });
 });
+
+/* ============================== Register =============================== */
+
+$("#signUp").click(function(e){
+  e.preventDefault();
+  $.get("xhr/register.php", function(){
+    window.location.assign('register.html');
+  });
+});
+
+/* ============================== Register =============================== */
+
+$("#join").click(function(e){
+  e.preventDefault();
+  $.get("xhr/register.php", function(){
+    window.location.assign('admin.html');
+  });
+});
+
+
+
+
+
+
+
+
 
 
 	
