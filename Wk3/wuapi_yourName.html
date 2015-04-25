@@ -204,15 +204,32 @@ $(document).ready(function($){
 $(document).ready(function($){
 	
 <!--This is an example of how to embed Geolookup. Use your own API key and city location-->	
-	$.ajax({ 
-		url : "http://api.wunderground.com/api/1d8a6ba2e976f0da/geolookup/conditions/q/FL/Orlando.json",
-		dataType : "jsonp", 
-          success : function(parsed_json) { 
-              var location = parsed_json['location']['city']; 
-              var temp_f = parsed_json['current_observation']['temp_f'];
-                  $(".almanac").html("Current temperature in " + location + " is: " + temp_f+"ºF");
-          } 
-	});
+$.ajax({
+url: "http://api.wunderground.com/api/1d8a6ba2e976f0da/almanac/q/FL/Orlando.json",
+dataType: "jsonp",
+success: function (parsed_json) {
+var almanac = parsed_json['almanac'];
+var almanacData = {};
+almanacData['Airport'] = almanac['airport_code'],
+almanacData['High temp'] = almanac['temp_high'] ['normal']['F'],
+almanacData['Normal C'] = almanac['temp_high'] ['normal']['C'],
+almanacData['Record F'] = almanac['temp_high'] ['record'] ['F'],
+almanacData['Record C'] = almanac['temp_high'] ['record'] ['C'],
+almanacData['Year Record'] = almanac['temp_high'] ['recordyear'],
+almanacData['Normal Low F'] = almanac['temp_low'] ['record'] ['F'],
+almanacData['Normal Low C'] = almanac['temp_low'] ['record'] ['C'],
+almanacData['Low Normal F'] = almanac['temp_low'] ['normal'] ['C'],
+almanacData['Low Normal F'] = almanac['temp_low'] ['recordyear'];
+for (index in almanacData) {
+if (almanacData.hasOwnProperty(index)) {
+var newHourlyString = index + ': ' + almanacData[index];
+var newHourlyParagraph = $('<p/>').text(newHourlyString);
+$(".almanac").append(newHourlyParagraph);
+
+}
+}
+}
+});
 });  //Closes Doc Ready Function
 
 </script>
