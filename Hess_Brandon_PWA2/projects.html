@@ -23,6 +23,12 @@
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="js/plugins/jquery-ui-1.11.4.custom/jquery-ui.css">
+
+	<link rel="stylesheet" href="js/plugins/jquery-ui-1.11.4.custom/jquery-ui.structure.css">
+
+	<link rel="stylesheet" href="js/plugins/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
 	
 	<!-- CSS concatenated and minified via ant build script-->
 	<link rel="stylesheet" href="css/style.css?v=1">
@@ -119,7 +125,7 @@
 	  margin-top: 5px;
 	  border-radius: 5px;
 	  font-size: 18px;
-	  width: 300px;
+	  width: 400px;
 	  height: 25px;
 	}
 	.welcome {
@@ -128,6 +134,10 @@
 	.tooltip {
 		z-index: 1002;
 	}
+
+	#sortable { list-style-type: none; margin: 0; padding: 0 0 7px 0; width: 80%; }
+  	#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+  	#sortable li span { position: absolute; margin-left: -1.3em; }
 	</style>
 	
 </head>
@@ -158,10 +168,10 @@
 	      
 	  </div>
 
-	    <div id="projectlist">
+	    <div  id="projectlist">
 	        <h1>Current Projects</h1>
 	        
-	        <div class="projects">
+	        <div id="sortable" class="projects">
 	        </div>
 	    </div>
 	</div> <!-- End of White -->
@@ -186,7 +196,7 @@
 	                <input class="masterTooltip" title="Please enter Project Description" name="projectDescription"type="text" id="projectDescription" placeholder="Project Description"/><br>
 	                
 	            <label>Project Due Date: </label>
-	                <input class="masterTooltip" title="Please enter Project Due Date" name="projectDueDate"type="text" id="projectDueDate" placeholder="Project Due Date"/><br>
+	                <input class="datepicker" title="Please enter Project Due Date" name="projectDueDate"type="text" id="projectDueDate" placeholder="Project Due Date"/><br>
 	                
 	            <label for="status">Select status:</label><br>
 	            
@@ -221,6 +231,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- plugins -->
 
+	<script type="text/javascript" src="js/plugins/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 	
 	<!-- main -->
 	<script type="text/javascript" src="js/main.js"></script>

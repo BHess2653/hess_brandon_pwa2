@@ -233,11 +233,12 @@ $("button").each(function(i) {if (i != 0) {
       $(".white").css("background", "#595959");
       $(".header").text("It's Me").css({"display": "block", "font-size": "2em", "-webkit-margin-before": "0.67em", "-webkit-margin-after": "0.67em", "-webkit-margin-start": "0px", "-webkit-margin-end": "0px", "font-weight": "bold"});
       // $( ".header" ).removeClass( "header" ).addClass( "glitch" );
+      $("h1, .header, p, button").attr('id', 'shake');
       $("#more").css("display", "none");
       $('#secret-found')[0].play(); // plays the sound
       $("#alarm")[0].play();
       $("#bg-music").attr("id", "newID");
-      // return alert("That's how I roll baby <3");
+      
     }
   };
 
@@ -325,8 +326,9 @@ var projects = function(){
                 for(var i=0, j=response.projects.length; i < j; i++) {                               
                     var result = response.projects[i];                                               
 
-                    $(".projects").append(                                                                                                     
-                    '<div id="sortable" class="ui-state-default">' +                                   
+                    $(".projects").append(
+                    '<div style="border: 1px solid black; padding: 10px 0 0 10px; max-height: 140px;">' +                                                                                                     
+                    '<div id="sortable">' +                                   
                     " <input class='projectid' type='hidden' value='" + result.id + "'>" +   
 
                     " Project Name: " + result.projectName + "<br>" +                                 
@@ -569,8 +571,10 @@ var updateAcct = function(){
 
 
 
+$( ".datepicker" ).datepicker();
 
-
+$( "#sortable" ).sortable();
+$( "#sortable" ).disableSelection();
 
 	
 
