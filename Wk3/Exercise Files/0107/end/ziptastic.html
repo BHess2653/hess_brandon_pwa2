@@ -461,13 +461,13 @@ $(document).ready(function () {
 		var zipCode = $(this).val();
 
 		// don't do anything until/unless the zip code is at least five characters long and numeric
-		if (zipCode.length === 5 && $.isNumeric(zipCode)) {
-			var requestURL = 'http://ziptasticapi.com/' + zipCode +'?callback=?';
-			$.getJSON(requestURL, null, function(data){
-				console.log(data);
+		if (zipCode.length === 5 && $.isNumeric(zipCode)) {							// length of the zip code equals 5.
+			var requestURL = 'http://ziptasticapi.com/' + zipCode +'?callback=?';	// grabs information from ziptasticapi website.
+			$.getJSON(requestURL, null, function(data){							    // 
+				console.log(data);													// console logs the data.
 				
-				if (data.city) $('#city').val(data.city);
-				if (data.state) $('#state').val(data.state);
+				if (data.city) $('#city').val(data.city);							// pulls from the zip code data and fills in city
+				if (data.state) $('#state').val(data.state);						// pulls from the zip code data and fills in state
 			});
 		}
 	});
