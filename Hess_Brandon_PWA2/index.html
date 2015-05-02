@@ -31,6 +31,9 @@
 
 	<link rel="stylesheet" href="js/plugins/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
 
+	<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
+
 	<link rel="stylesheet" href="css/style.css?v=1">
 	<!-- end CSS-->
 
@@ -43,9 +46,9 @@
 		<source src="audio/Sarif.mp3"></source>
 	</audio> -->
 
-	<audio id="alarm" preload="auto" loop>
-      <source src="audio/alarm.mp3"></source>
-      <source src="audio/alarm.ogg"></source>
+	<audio id="alarm" preload="auto" >
+      <source src="audio/scare.mp3"></source>
+      <source src="audio/scare.ogg"></source>
     </audio>
 
 	<audio id="secret-found" preload="auto" >
@@ -61,17 +64,16 @@
 	  <li><input class="masterTooltip" type="password" name="psw" id="pass" placeholder="********" title="Please eneter password"></li>
 	 
 	  <li><button id="signinButton">Log in</button>
-
-	  		<audio id="hover" preload="auto"><source src="audio/hover.mp3" controls></source></audio>
-	  		<audio id="click" preload="auto"><source src="audio/click.mp3" controls></source></audio>
-	  		<audio id="cancel" preload="auto"><source src="audio/cancel.mp3" controls></source></audio>
+  		<audio id="hover" preload="auto"><source src="audio/hover.mp3" controls></source></audio>
+  		<audio id="click" preload="auto"><source src="audio/click.mp3" controls></source></audio>
+  		<audio id="cancel" preload="auto"><source src="audio/cancel.mp3" controls></source></audio>
 	  </li>
 	  <li>|</li>
 	  <li><button id="signUp">Sign up</button></li>
 	</ul>
 	</div>
 	<div class="header">
-	<h1 id="glitch">Team Paradox</h1>
+	<h1 id="glitch" style="visibility: hidden">Team Paradox</h1>
 	</div>
 	</div>
 
@@ -105,7 +107,9 @@
 	<script type="text/javascript" src="js/plugins/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 
 	<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
-	
+
+	<script src="dist/sweetalert.min.js"></script> 
+
 	<!-- main -->
 	<script type="text/javascript" src="js/main.js"></script>
   

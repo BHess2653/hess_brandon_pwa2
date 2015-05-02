@@ -8,7 +8,7 @@ html, body {
 }
 
 html {
-  background: url(../images/bg.jpg) fixed;
+  background: url(../images/bg2.jpg) fixed;
   background-color: #ccc;
   background-size: 100%;
 }
@@ -32,7 +32,7 @@ a:hover {
 
 p {
   padding: 0 5%;
-  text-align: center;
+/*  text-align: center;*/
 }
 
 img {
@@ -151,11 +151,19 @@ input:focus {
   background: rgba(255, 255, 255, .8);
   padding: 0 5%;
 }
+.clear {
+  background: hsla(299, 100%, 0%, .15);
+  padding: 0 5%;
+  height: 75%;
+  color: white;
+  list-style-type: none;
+}
 .dark {
   clear: both;
   color: #eeeeec;
   background: hsla(299, 100%, 0%, 0.5);
   padding: 0 5%;
+  text-align: center;
 }
 
 .nopadding {
@@ -395,4 +403,58 @@ figure#timer-animation img {
 
 
 
+// Mixins
+
+@mixin prefix ($property, $value,
+                 $moz:    true,
+                 $webkit: true,
+                 $o:      false,
+                 $ms:     true,
+                 $spec:   true) {
+    @if $moz    {    -moz-#{$property}: $value; }
+    @if $webkit { -webkit-#{$property}: $value; }
+    @if $o      {      -o-#{$property}: $value; }
+    @if $ms     {     -ms-#{$property}: $value; }
+    @if $spec   {         #{$property}: $value; }
+}
+
+// Animations
+
+@keyframes bar-fill {
+   0% { width: 0; }
+}
+@-webkit-keyframes bar-fill {
+   0% { width: 0; }
+}
+@-moz-keyframes bar-fill {
+   0% { width: 0; }
+}
+@-o-keyframes bar-fill {
+   0% { width: 0; }
+}
+
+// Graph stuff
+
+.bar-graph {
+    list-style: none;
+    margin: 50px 0px auto;
+    list-style-type: none;
+}
+
+.bar-wrap {
+  @include prefix(border-radius,10px 10px 10px 10px);
+  background-color: rgba(204, 0, 0, 0.2);          
+  border: 1px solid rgba(204, 0, 0, 0.8);
+  margin-bottom: 10px;
+  max-width: 600px;
+}
+
+.bar-fill { 
+  @include prefix(border-radius,10px 10px 10px 10px);
+  @include prefix(animation, bar-fill 1s);
+  background-color: rgba(204, 0, 0, 1);
+  display: block;
+  height: 15px;
+  width: 0px;
+}
 

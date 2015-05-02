@@ -238,6 +238,7 @@ $("button").each(function(i) {if (i != 0) {
       $('#secret-found')[0].play(); // plays the sound
       $("#alarm")[0].play();
       $("#bg-music").attr("id", "newID");
+      swal({   title: "Success!",   text: "Look what you found!",   type: "success",   confirmButtonText: "Ok" });
       
     }
   };
@@ -450,7 +451,7 @@ var updateAcct = function(){
             console.log(response.error);
           }else{
             console.log('account updated');
-            alert("Your Account has been Updated");
+            swal({   title: "Success!",   text: "Your account has been updated!",   type: "success",   confirmButtonText: "Ok" });
           };
         }
       });
@@ -460,114 +461,37 @@ var updateAcct = function(){
 
 
 
+/* ===================================== Back Btn ============================= */
+
+$('#back').on('click', function(e){
+    e.preventDefault();
+    window.location.assign('index.html');
+});
 
 
+/* ===================================== Account Btn =============================== */
+
+$('#Acct').on('click', function(e){
+    e.preventDefault();
+    window.location.assign('admin.html');
+});
 
 
+/* ================================== Display Username =================================== */
+
+$.getJSON('xhr/check_login.php', function(data){
+    console.log(data);
+    $.each(data, function(key, val){
+        console.log(val.first_name);
+        $('.userid').html('Welcome: ' + val.first_name);
+        $('#01').html(val.user_n);
+        $('#02').html(val.first_name + ' ' +val.last_name);
+    })
+});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /* ============================ Call To Aaction Btn ================================= */
-
-        // $('.userbtn').on('click', function(e){
-        //     e.preventDefault();
-        //     window.location.assign('register.html');
-
-
-        /* ================================= Registration Btn =============================== */
-
-        // $('.regBtn').on('click', function(e){
-        //     e.preventDefault();
-        //     window.location.assign('register.html');
-        // });
-
-        /* ================================= Projects Btn ================================== */
-
-        // $('.projectsbtn').on('click', function(e){
-        //     e.preventDefault();
-        //     window.location.assign('projects.html');
-
-
-        /* ======================================= Users Btn =============================== */
-
-        // $('.userbtn').on('click', function(e){
-        //     e.preventDefault();
-        //     window.location.assign('admin.html');
-
-
-        /* ======================================= Tasks Btn =============================== */
-
-        // $('.taskBtn').on('click', function(e){
-        //     e.preventDefault();
-        //     window.location.assign('task.html');
-        // });
-
-
-        /* =========================== Index To Sign Up Page ================================ */
-
-        // $('#signupbtn').on('click', function(e){
-        //     e.preventDefault();
-        //     window.location.assign('projects.html');
-        // });
-
-
-        /* =========================== Dashboard Btn To Dashboard ============================ */
-
-        // $('.dashboard').on('click', function(e){
-        //     e.preventDefault();
-        //     window.location.assign('dashboard.html');
-        // });
-
-
-        /* ===================================== Go To Profile Page ============================= */
-
-        // $('#profilebtn').on('click', function(e){
-        //     e.preventDefault();
-        //     window.location.assign('profile.html');
-        // });
-
-
-        /* ===================================== Add Project Page =============================== */
-
-        // $('.addbtn').on('click', function(e){
-        //     e.preventDefault();
-        //     window.location.assign('add.html');
-        // });
-
-
-        /* ================================== Display Username =================================== */
-
-        $.getJSON('xhr/check_login.php', function(data){
-            console.log(data);
-            $.each(data, function(key, val){
-                console.log(val.first_name);
-                $('.userid').html('Welcome User: ' + val.first_name);
-            })
-        });
-
-
-        //  ============================================
-        //  SETUP FOR INIT
+//  ============================================
+//  SETUP FOR INIT
 
 
 
@@ -580,24 +504,4 @@ $( "#sortable" ).disableSelection();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })(jQuery); // end private scope
-
-
-
-

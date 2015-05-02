@@ -9,7 +9,7 @@
 	Your code should load your page templates into the container
 -->
 
-<html lang="en" style="background: url(images/guy3.jpg) fixed; background-size:cover;">
+<html lang="en" style="background: url(images/bg3.jpg) fixed; background-size:cover;">
 <head>
 
 	<meta charset="utf-8">
@@ -24,6 +24,11 @@
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
+	<link rel="stylesheet" href="css/screen.css">
+	<link rel="stylesheet" href="css/lightbox.css">
+
 	<!-- CSS concatenated and minified via ant build script-->
 	<link rel="stylesheet" href="css/style.css?v=1">
 	<!-- end CSS-->
@@ -40,7 +45,7 @@
  		margin:0; 
 	}
 	.fullscreen {
-  		height: 85%;
+  		height: 10%;
   		position: relative;
 	}
 
@@ -52,6 +57,7 @@
 	}
 
 	#tabs-nav{
+	  margin-bottom: 0;
 	  width: 600px;
 	  height: 75px;
 	  padding: 20px;
@@ -73,7 +79,7 @@
 	<div id="header">
 	<img src="images/Logo2.png" width="50px" />
 	<ul>
-	  <li class="userid">Welcome User:</li>
+	  <li class="userid">Welcome:</li>
 	  <!-- <li><button id="home">My Account</button> -->
 	  	<audio id="hover" preload="auto"><source src="audio/hover.mp3" controls></source></audio>
 	  	<audio id="click" preload="auto"><source src="audio/click.mp3" controls></source></audio>
@@ -84,10 +90,34 @@
 	</ul>
 	</div>
 	</div>
+	<div class="clear">
+		<p id="01"></p>
+		<p id="02"></p>
+		<ul class="bar-graph"> 
+		  <li style="list-style-type: none;">
+		    <p>Health</p>
+		    <div class="bar-wrap"><span class="bar-fill" style="width: 60%;"></span></div>
+		  </li> 
+		  <li style="list-style-type: none;">
+		    <p>Recharge Rate</p>
+		    <div class="bar-wrap"><span class="bar-fill" style="width: 40%;"></span></div>
+		  </li> 
+		  <li style="list-style-type: none;">
+		    <p>Damage</p>
+		    <div class="bar-wrap"><span class="bar-fill"  style="width: 50%;"></span></div>
+		  </li> 
+		  <li style="list-style-type: none;">
+		    <p>Stamina</p>
+		    <div class="bar-wrap"><span class="bar-fill" style="width: 70%;"></span></div>
+		  </li> 
+		</ul>
+
+	</div>
+<!-- 	<div id="chart"></div> -->
 
 	<div class="semitrans">
 	  <a id="test"></a>
-	  <h1>My Account</h1>
+	  <h1 id="glitch">My Account</h1>
 		<form action="#">
 			<ul>
 			  <li>First Name: </li><input class="masterTooltip" type="text" name="name" id="updatefirstname" title="Please enter firstname">
@@ -103,26 +133,26 @@
 
 	<div class="semitrans">
 		<ul id="tabs-nav">
-	    <li><a href="#projects"><img src="images/01.gif" width="100" height="67" id="projects"></a></li>
-	    <li><a href="#tasks"><img src="images/02.jpg" width="100" height="67" id="tasks"></a></li>
-	    <li><a href="#users"><img src="images/03.png" width="100" height="67" id="users"></a></li>
+	    <li><a href="#projects"><img src="images/01.png" width="100" height="67" id="projects"></a></li>
+	    <li><a href="#tasks"><img src="images/3.png" width="100" height="67" id="tasks"></a></li>
+	    <li><a href="#users"><img src="images/02.jpg" width="100" height="67" id="users"></a></li>
 	  </ul>
 	  
 	  <div id="tabs">
 	    
 	  <p id="projects">
-	  First tab<br><br>
-	  Go to my projects...  <button class="projectsbtn">Projects</button>
+	  Create and View Projects you have crated.<br><br>
+	  Go to my Projects...  <button class="projectsbtn">Projects</button>
 	  </p>
 	    
 	  <p id="tasks">
-	  Second tab<br><br>
-	  Go to my tasks...  <button class="taskbtn">Tasks</button>
+	  View your Bio<br><br>
+	  Go to my Bio...  <button class="taskbtn">Tasks</button>
 	  </p>
 	    
 	  <p id="users">
-	  Third tab<br><br>
-	  Go to my users...  <button class="usersbtn">Users</button>
+	  View your Characters and Game information.<br><br>
+	  Go to my Characters...  <button class="usersbtn">Users</button>
 	  </p>
 	    
 	  </div><!-- Closes Tabs Content -->
@@ -130,10 +160,21 @@
 
 
 	<div class="semitrans">
-		<h3>Image Gallery Here:</h3>
-  		<p>You can make this any kind of gallery. You can make icons or images, however works best with your site.</p>
-	</div>
+		<h3 id="glitch">Image Gallery Here:</h3>
+<!--   		<p>You can make this any kind of gallery. You can make icons or images, however works best with your site.</p> -->
+  		<div class="image-row">
+				<div class="image-set">
+					<a class="example-image-link" href="img/demopage/02.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="img/demopage/02.jpg" alt=""/></a>
 
+					<a class="example-image-link" href="img/demopage/03.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="img/demopage/03.jpg" alt="" /></a>
+
+					<a class="example-image-link" href="img/demopage/04.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="img/demopage/04.jpg" alt="" /></a>
+
+					<a class="example-image-link" href="img/demopage/05.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="img/demopage/05.jpg" alt="" /></a>
+				</div>
+			</div>
+	</div>
+	
 
 	<div class="dark">
 	  <p>&#169; 2015 Brandon Hess</p>
@@ -142,11 +183,11 @@
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="js/jquery.messagebox.js"></script>
+	<script src="dist/sweetalert.min.js"></script> 
 
 	<!-- plugins -->
 
-	
+	<script src="js/lightbox.js"></script>
 	<!-- main -->
 	<script type="text/javascript" src="js/main.js"></script>
   

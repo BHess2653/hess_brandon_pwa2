@@ -23,7 +23,10 @@
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	
+	<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
 	<!-- CSS concatenated and minified via ant build script-->
 	<link rel="stylesheet" href="css/style.css?v=1">
 	<!-- end CSS-->
@@ -50,7 +53,7 @@
 	<div id="header">
 	<img src="images/Logo2.png" width="50px" />
 	<ul>
-	  <li><button id="home">Back</button>
+	  <li><button id="back">Back</button>
 	  	<audio id="hover" preload="auto"><source src="audio/hover.mp3" controls></source></audio>
 	  	<audio id="click" preload="auto"><source src="audio/click.mp3" controls></source></audio>
 	  	<audio id="cancel" preload="auto"><source src="audio/cancel.mp3" controls></source></audio>
@@ -61,7 +64,7 @@
 
 	<div class="semitrans">
 	  <a id="test"></a>
-	  <h1>Sign Up</h1>
+	  <h1 id="glitch">Sign Up</h1>
 	  <img class="floatright" src="images/downarrow.png" />
 	  <p id="right">To join please fill out the form down below. Once filled out you'll be a member and can then set your own meetup times in the group.</p>
 		<form>
@@ -84,7 +87,7 @@
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- plugins -->
-
+	<script src="dist/sweetalert.min.js"></script> 
 	
 	<!-- main -->
 	<script type="text/javascript" src="js/main.js"></script>
